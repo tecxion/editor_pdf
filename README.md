@@ -2,9 +2,7 @@
 <img src="https://www.tecxart.es/wp-content/uploads/2025/04/logo5sinfondo.png">
 </h1>
 
-![Static Badge](https://img.shields.io/badge/status-OK-green?logo=starship) ![Static Badge](https://img.shields.io/badge/version-1.0.0-green) ![Static Badge](https://img.shields.io/badge/html-css-blue?logo=html5) 
-<br>
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/tecxion/editor_pdf) ![GitHub Created At](https://img.shields.io/github/created-at/tecxion/editor_pdf)
+![Static Badge](https://img.shields.io/badge/status-OK-green?logo=starship) ![Static Badge](https://img.shields.io/badge/version-1.0.0-green) ![Static Badge](https://img.shields.io/badge/html-css-blue?logo=html5) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/tecxion/editor_pdf) ![GitHub Created At](https://img.shields.io/github/created-at/tecxion/editor_pdf)
 
 
 
