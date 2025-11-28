@@ -1,0 +1,342 @@
+:root {
+    --color-bg: #111;
+    --color-bg-alt: #1e1e1e;
+    --color-primary: #e50914;
+    --color-primary-light: #ff3040;
+    --color-text: #f5f5f5;
+    --color-muted: #aaaaaa;
+    --color-border: #333;
+    --color-accent: #444;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #222, #000);
+    color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, #000, #111, #000);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 16px;
+    width: 100%;
+}
+
+.menu-pdf {
+    margin-top: 10px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.logo {
+    height: 32px;
+    width: auto;
+}
+
+.site-title {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-pag {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.nav-btn:hover {
+    border-color: var(--color-primary-light);
+}
+
+.nav-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Layout principal */
+
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.5fr) minmax(0, 1.3fr);
+    gap: 1rem;
+    padding: 1rem 1.5rem 2rem;
+}
+
+section {
+    background: rgba(17, 17, 17, 0.96);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+section h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+}
+
+/* Upload panel */
+
+.upload-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.upload-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.upload-extra {
+    display: none;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.upload-extra.visible {
+    display: flex;
+}
+
+.file-info {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+}
+
+/* Tool panel */
+
+.tool-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tool-section p {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin-bottom: 0.5rem;
+}
+
+.tool-section input[type="text"],
+.tool-section input[type="password"],
+.tool-section input[type="url"],
+.tool-section select {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #0f0f0f;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+}
+
+.file-list {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.4rem;
+    margin: 0.5rem 0;
+}
+
+.file-list li {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.1rem;
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.file-list li:last-child {
+    border-bottom: none;
+}
+
+.protect-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* Preview */
+
+.preview-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#pdfCanvas {
+    width: 100%;
+    max-height: 400px;
+    background: #000;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+.preview-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+}
+
+/* Result panel */
+
+.result-panel {
+    margin-top: 1rem;
+    grid-column: 1 / -1;
+}
+
+#resultMessage {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botones */
+
+.btn {
+    background: #222;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.05s;
+}
+
+.btn.primary {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn.small {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.btn:hover {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    border-top: 1px solid var(--color-border);
+    background: #050505;
+}
+
+/* Utilidades */
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .result-panel {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .container {
+        padding: 0.75rem;
+    }
+}
