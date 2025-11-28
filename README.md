@@ -80,3 +80,10 @@ Este proyecto tiene una licencia MIT y es de uso público, solo tendrás que hac
 >![NOTE]
 >Hay una función para añadir contraseñas pero no está correctamente implementada y no funciona el añadir o quitar contraseñas.
 
+<h1 align="center">
+   <a href="https://paypal.me/jfmpkiko">
+<img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Paypal" />  </a><a href="https://coff.ee/tecxart"><img src="https://github.com/tecxion/TecXion/blob/main/Media/cafe1.png" alt="Cafe">   <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/tecxion/tecxion">    <img alt="GitHub User's stars" src="https://img.shields.io/github/stars/tecxion">
+
+</a>
+</h1>
+
