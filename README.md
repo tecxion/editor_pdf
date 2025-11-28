@@ -1,3 +1,8 @@
+<h1 align="center">
+<img src="https://www.tecxart.es/wp-content/uploads/2025/04/logo5sinfondo.png">
+</h1>
+
+
 # PDF Tools Web App
 
 Aplicación web en JavaScript para trabajar con archivos PDF directamente en el navegador. Permite dividir, combinar, comprimir, convertir y proteger/desproteger PDFs sin enviar los documentos a un servidor.
