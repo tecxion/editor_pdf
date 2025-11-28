@@ -77,7 +77,7 @@ Si prefieres, puedes modificar `index.html` para servir las librerías de forma 
 
 Este proyecto tiene una licencia MIT y es de uso público, solo tendrás que hacer mención a este repositorio.
 
->![NOTE]
+>[!NOTE]
 >Hay una función para añadir contraseñas pero no está correctamente implementada y no funciona el añadir o quitar contraseñas.
 
 <h1 align="center">
